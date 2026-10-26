@@ -1,0 +1,109 @@
+/* Hace que el tamaño incluya el contenido y el relleno */
+* {
+    box-sizing: border-box; /* Evita que el padding aumente el ancho total */
+}
+
+/* Estilo general de toda la página */
+body {
+    margin: 0; /* Quita el margen que agrega el navegador */
+    padding: 30px 16px; /* Deja espacio alrededor del contenido */
+    font-family: Arial, sans-serif; /* Define el tipo de letra */
+    background: #f3f5f2; /* Pone un fondo gris verdoso claro */
+    color: #2d4d7c; /* Define el color del texto */
+}
+
+/* Caja blanca que contiene el proyecto */
+.contenedor {
+    max-width: 760px; /* Limita el ancho en pantallas grandes */
+    margin: 30px auto; /* Centra la caja y deja espacio arriba y abajo */
+    padding: 28px; /* Separa el contenido de los bordes */
+    background: #ffffff; /* Pone el fondo blanco */
+    border-radius: 12px; /* Redondea las esquinas */
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08); /* Añade una sombra suave */
+}
+
+/* Título principal */
+h1 {
+    margin-top: 0; /* Quita el espacio superior del título */
+    text-align: center; /* Centra el texto */
+    color: #2d4d7c; /* Usa verde oscuro */
+}
+
+/* Texto que aparece bajo el título */
+.intro {
+    text-align: center; /* Centra la introducción */
+    color: #5d6962; /* Usa un gris verdoso para diferenciarlo */
+    margin-bottom: 24px; /* Separa el texto de las pestañas */
+}
+
+/* Fila que agrupa los botones */
+.pestanas {
+    display: flex; /* Coloca los botones en una fila */
+    gap: 8px; /* Deja espacio entre botones */
+    border-bottom: 2px solid #dce5de; /* Dibuja una línea debajo de las pestañas */
+    flex-wrap: wrap; /* Permite que los botones bajen de fila si falta espacio */
+}
+
+/* Estilo común de cada botón */
+.pestana {
+    flex: 1; /* Reparte el espacio entre los botones */
+    padding: 12px 10px; /* Da espacio dentro del botón */
+    border: none; /* Quita el borde predeterminado */
+    border-radius: 8px 8px 0 0; /* Redondea las esquinas superiores */
+    background: #e9eee9; /* Color de fondo de pestaña inactiva */
+    color: #2d4d7c; /* Color del texto del botón */
+    font: inherit; /* Usa la misma letra que la página */
+    cursor: pointer; /* Muestra una mano al pasar por encima */
+}
+
+/* Apariencia de la pestaña seleccionada */
+.pestana.activa {
+    background: #2d4d7c; /* Marca la pestaña activa en verde oscuro */
+    color: white; /* Hace blanco el texto activo */
+}
+
+/* Cambio visual al pasar el cursor por una pestaña */
+.pestana:hover {
+    background: #d5e3d8; /* Aclara el fondo al pasar el cursor */
+    color: #2d4d7c; /* Oscurece el texto para mantener contraste */
+}
+
+/* Mantiene el color de la pestaña activa al pasar el cursor */
+.pestana.activa:hover {
+    background: #2d4d7c; /* Conserva el fondo verde de la pestaña activa */
+    color: white; /* Conserva el texto blanco */
+}
+
+/* Espacio interior de cada panel de contenido */
+.contenido {
+    padding: 22px 8px 8px; /* Separa el texto de los bordes del panel */
+    line-height: 1.6; /* Hace más cómoda la lectura */
+}
+
+/* Títulos dentro de los paneles */
+.contenido h2 {
+    margin-top: 0; /* Quita el margen superior del subtítulo */
+    color: #2d4d7c; /* Usa el mismo verde de los títulos */
+}
+
+/* Espacio entre los elementos de las listas */
+.contenido li {
+    margin-bottom: 6px; /* Separa un poco cada actividad */
+}
+
+/* Señal visible cuando se navega con el teclado */
+.pestana:focus-visible {
+    outline: 3px solid #d18a36; /* Dibuja un borde naranja de enfoque */
+    outline-offset: 3px; /* Separa el borde del botón */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 520px) {
+    .contenedor {
+        padding: 18px; /* Reduce el espacio interior en móviles */
+    }
+
+    .pestana {
+        flex-basis: 40%; /* Permite que las pestañas se acomoden en dos filas */
+    }
+}

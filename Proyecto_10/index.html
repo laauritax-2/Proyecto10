@@ -1,0 +1,64 @@
+<!DOCTYPE html> <!-- Indica que el documento usa HTML5 -->
+<html lang="es"> <!-- Define que el idioma de la página es español -->
+<head> <!-- Contiene información de configuración de la página -->
+    <meta charset="UTF-8"> <!-- Permite mostrar tildes y caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapta la página al ancho del dispositivo -->
+    <title>Proyecto 10 - Pestañas</title> <!-- Texto que aparece en la pestaña del navegador -->
+    <link rel="stylesheet" href="styles.css"> <!-- Conecta el archivo de estilos CSS -->
+</head> <!-- Cierra la sección de configuración -->
+<body> <!-- Contiene todo lo que se ve en la página -->
+    <main class="contenedor"> <!-- Agrupa el contenido principal -->
+        <h1>Mis espacios favoritos</h1> <!-- Título principal de la página -->
+        <p class="intro">Selecciona una pestaña para conocer cada lugar.</p> <!-- Texto introductorio -->
+
+        <div class="pestanas" role="tablist" aria-label="Lugares favoritos"> <!-- Agrupa los botones de las pestañas -->
+            <button class="pestana activa" role="tab" id="tab-1" aria-controls="contenido-1" aria-selected="true">Naturaleza</button> <!-- Botón inicial, seleccionado por defecto -->
+            <button class="pestana" role="tab" id="tab-2" aria-controls="contenido-2" aria-selected="false">Lectura</button> <!-- Botón para mostrar el contenido de lectura -->
+            <button class="pestana" role="tab" id="tab-3" aria-controls="contenido-3" aria-selected="false">Música</button> <!-- Botón para mostrar el contenido de música -->
+            <button class="pestana" role="tab" id="tab-4" aria-controls="contenido-4" aria-selected="false">Viajes</button> <!-- Botón para mostrar el contenido de viajes -->
+        </div> <!-- Cierra el grupo de pestañas -->
+
+        <section class="contenido activo" id="contenido-1" role="tabpanel" aria-labelledby="tab-1"> <!-- Panel visible al iniciar -->
+            <h2>Naturaleza</h2> <!-- Título del primer panel -->
+            <p>Un lugar tranquilo para caminar, respirar aire fresco y descansar de la rutina.</p> <!-- Descripción del tema -->
+            <ul> <!-- Inicia una lista de actividades -->
+                <li>Salir a caminar</li> <!-- Primera actividad -->
+                <li>Disfrutar del paisaje</li> <!-- Segunda actividad -->
+                <li>Tomar fotografías</li> <!-- Tercera actividad -->
+            </ul> <!-- Cierra la lista -->
+        </section> <!-- Cierra el panel de naturaleza -->
+
+        <section class="contenido" id="contenido-2" role="tabpanel" aria-labelledby="tab-2" hidden> <!-- Panel oculto hasta elegir Lectura -->
+            <h2>Lectura</h2> <!-- Título del segundo panel -->
+            <p>Leer permite conocer nuevas ideas e imaginar otros mundos sin salir de casa.</p> <!-- Descripción del tema -->
+            <ul> <!-- Inicia una lista de actividades -->
+                <li>Elegir un libro interesante</li> <!-- Primera actividad -->
+                <li>Leer un poco cada día</li> <!-- Segunda actividad -->
+                <li>Anotar frases favoritas</li> <!-- Tercera actividad -->
+            </ul> <!-- Cierra la lista -->
+        </section> <!-- Cierra el panel de lectura -->
+
+        <section class="contenido" id="contenido-3" role="tabpanel" aria-labelledby="tab-3" hidden> <!-- Panel oculto hasta elegir Música -->
+            <h2>Música</h2> <!-- Título del tercer panel -->
+            <p>La música acompaña diferentes momentos y puede ayudar a cambiar el ánimo.</p> <!-- Descripción del tema -->
+            <ul> <!-- Inicia una lista de actividades -->
+                <li>Escuchar canciones favoritas</li> <!-- Primera actividad -->
+                <li>Descubrir artistas nuevos</li> <!-- Segunda actividad -->
+                <li>Crear una lista de reproducción</li> <!-- Tercera actividad -->
+            </ul> <!-- Cierra la lista -->
+        </section> <!-- Cierra el panel de música -->
+
+        <section class="contenido" id="contenido-4" role="tabpanel" aria-labelledby="tab-4" hidden> <!-- Panel oculto hasta elegir Viajes -->
+            <h2>Viajes</h2> <!-- Título del cuarto panel -->
+            <p>Conocer otros lugares permite aprender de distintas culturas y costumbres.</p> <!-- Descripción del tema -->
+            <ul> <!-- Inicia una lista de actividades -->
+                <li>Planear una ruta</li> <!-- Primera actividad -->
+                <li>Probar comidas típicas</li> <!-- Segunda actividad -->
+                <li>Conocer sitios nuevos</li> <!-- Tercera actividad -->
+            </ul> <!-- Cierra la lista -->
+        </section> <!-- Cierra el panel de viajes -->
+    </main> <!-- Cierra el contenido principal -->
+
+    <script src="script.js"></script> <!-- Conecta el archivo JavaScript que activa las pestañas -->
+</body> <!-- Cierra el contenido visible -->
+</html> <!-- Cierra el documento HTML -->
